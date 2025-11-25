@@ -133,8 +133,8 @@
     <div class="w3-content w3-container" style="max-width:1200px; margin-top: 100px; margin-bottom: 40px;">
 
         <div class="w3-small w3-margin-bottom">
-            <a class="w3-text-grey" href="#">Inicio</a> /
-            <a class="w3-text-grey" href="#">Campañas</a> /
+            <a class="w3-text-grey" href="inicio.html">Inicio</a> /
+            <a class="w3-text-grey" href="listado-campañas.html">Campañas</a> /
             <span class="w3-text-black" style="font-weight: 500;">Vacunación Antirrábica</span>
         </div>
 
@@ -215,7 +215,7 @@
                 <div class="w3-white w3-card-4 card-rounded w3-padding-large" style="position: sticky; top: 100px;">
                     <h2 class="w3-large w3-text-black" style="font-weight: bold; margin-bottom: 5px;">Reservá tu turno
                     </h2>
-                    <p class="w3-text-grey w3-small w3-margin-bottom">Seleccioná una fecha y hora, y completá tus datos.
+                    <!-- <p class="w3-text-grey w3-small w3-margin-bottom">Seleccioná una fecha y hora, y completá tus datos.
                     </p>
 
                     <form action="resumen.html" class="w3-container w3-padding-0">
@@ -224,62 +224,61 @@
                                 fecha</label>
                             <input class="w3-input input-rounded w3-margin-top" id="date" name="date" type="date"
                                 value="2025-28-11" />
+                        </div> -->
+
+                    <div class="w3-section">
+                        <p class="w3-small w3-text-black" style="font-weight: 500;">1. Elegí un horario</p>
+                        <div class="w3-row w3-small w3-margin-top" style="gap: 8px; display: flex; flex-wrap: wrap;">
+                            <button class="w3-col s3 w3-center btn-rounded w3-light-grey w3-text-grey w3-border-0"
+                                disabled="" type="button" style="padding: 8px 0; opacity: 0.6;">09:00</button>
+
+                            <!-- Botón seleccionado (Estilo Primary) -->
+                            <button class="w3-col s3 w3-center btn-rounded time-slot-selected" type="button"
+                                style="padding: 8px 0;">09:30</button>
+
+                            <button
+                                class="w3-col s3 w3-center btn-rounded w3-white w3-border w3-border-light-grey w3-hover-light-grey"
+                                type="button" style="padding: 8px 0;">10:00</button>
+                            <button
+                                class="w3-col s3 w3-center btn-rounded w3-white w3-border w3-border-light-grey w3-hover-light-grey"
+                                type="button" style="padding: 8px 0;">10:30</button>
+                            <button
+                                class="w3-col s3 w3-center btn-rounded w3-white w3-border w3-border-light-grey w3-hover-light-grey"
+                                type="button" style="padding: 8px 0;">11:00</button>
+                            <button class="w3-col s3 w3-center btn-rounded w3-light-grey w3-text-grey w3-border-0"
+                                disabled="" type="button" style="padding: 8px 0; opacity: 0.6;">11:30</button>
                         </div>
+                    </div>
 
-                        <div class="w3-section">
-                            <p class="w3-small w3-text-black" style="font-weight: 500;">2. Elegí un horario</p>
-                            <div class="w3-row w3-small w3-margin-top"
-                                style="gap: 8px; display: flex; flex-wrap: wrap;">
-                                <button class="w3-col s3 w3-center btn-rounded w3-light-grey w3-text-grey w3-border-0"
-                                    disabled="" type="button" style="padding: 8px 0; opacity: 0.6;">09:00</button>
+                    <hr class="w3-border-grey w3-margin-top w3-margin-bottom" style="opacity: 0.3;" />
 
-                                <!-- Botón seleccionado (Estilo Primary) -->
-                                <button class="w3-col s3 w3-center btn-rounded time-slot-selected" type="button"
-                                    style="padding: 8px 0;">09:30</button>
+                    <div class="w3-section">
+                        <p class="w3-small w3-text-black w3-margin-bottom" style="font-weight: 500;">2. Completá tus
+                            datos</p>
+                        <div class="w3-row-padding" style="margin: 0 -8px;">
+                            <div class="w3-col s12 w3-margin-bottom">
+                                <input class="w3-input input-rounded" placeholder="Nombre del Tutor" type="text" />
+                            </div>
+                            <div class="w3-col s12 w3-margin-bottom">
+                                <input class="w3-input input-rounded" placeholder="Email" type="email" />
+                            </div>
 
-                                <button
-                                    class="w3-col s3 w3-center btn-rounded w3-white w3-border w3-border-light-grey w3-hover-light-grey"
-                                    type="button" style="padding: 8px 0;">10:00</button>
-                                <button
-                                    class="w3-col s3 w3-center btn-rounded w3-white w3-border w3-border-light-grey w3-hover-light-grey"
-                                    type="button" style="padding: 8px 0;">10:30</button>
-                                <button
-                                    class="w3-col s3 w3-center btn-rounded w3-white w3-border w3-border-light-grey w3-hover-light-grey"
-                                    type="button" style="padding: 8px 0;">11:00</button>
-                                <button class="w3-col s3 w3-center btn-rounded w3-light-grey w3-text-grey w3-border-0"
-                                    disabled="" type="button" style="padding: 8px 0; opacity: 0.6;">11:30</button>
+                            <div class="w3-col s6" style="padding-right: 4px;">
+                                <input class="w3-input input-rounded" placeholder="Mascota" type="text" />
+                            </div>
+                            <div class="w3-col s6" style="padding-left: 4px;">
+                                <select class="w3-select input-rounded">
+                                    <option>Perro</option>
+                                    <option>Gato</option>
+                                </select>
                             </div>
                         </div>
+                    </div>
 
-                        <hr class="w3-border-grey w3-margin-top w3-margin-bottom" style="opacity: 0.3;" />
-
-                        <div class="w3-section">
-                            <p class="w3-small w3-text-black w3-margin-bottom" style="font-weight: 500;">3. Completá tus
-                                datos</p>
-                            <div class="w3-row-padding" style="margin: 0 -8px;">
-                                <div class="w3-col s12 w3-margin-bottom">
-                                    <input class="w3-input input-rounded" placeholder="Nombre del Tutor" type="text" />
-                                </div>
-                                <div class="w3-col s12 w3-margin-bottom">
-                                    <input class="w3-input input-rounded" placeholder="Email" type="email" />
-                                </div>
-
-                                <div class="w3-col s6" style="padding-right: 4px;">
-                                    <input class="w3-input input-rounded" placeholder="Mascota" type="text" />
-                                </div>
-                                <div class="w3-col s6" style="padding-left: 4px;">
-                                    <select class="w3-select input-rounded">
-                                        <option>Perro</option>
-                                        <option>Gato</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button class="w3-button w3-block w3-vet-primary btn-rounded w3-margin-top" type="submit"
-                            style="font-weight: bold; padding: 12px;">
-                            Confirmar Turno
-                        </button>
+                    <button class="w3-button w3-block w3-vet-primary btn-rounded w3-margin-top" type="submit"
+                        style="font-weight: bold; padding: 12px;">
+                        Confirmar Turno
+                    </button>
                     </form>
                 </div>
             </div>
