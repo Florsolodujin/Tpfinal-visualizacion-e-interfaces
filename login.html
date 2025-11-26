@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Acceso</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* ESTILOS COMUNES */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lexend", sans-serif;
+        }
+
+        a {
+            text-decoration: none; 
+        }
+
+        /* Paleta de Colores (Basada en tu definición) */
+        body {
+            background-color: #f7f6f2; /* Fondo del body */
+            color: #000000;
+        }
+
+        /* Primario: #2f9d94 (Verde azulado) */
+        .w3-vet-primary {
+            background-color: #2f9d94 !important;
+            color: white !important;
+        }
+
+        .w3-text-vet-primary {
+            color: #2f9d94 !important;
+        }
+
+        /* Oscuro: #063154 (Azul marino) */
+        .w3-vet-dark {
+            background-color: #063154 !important;
+            color: white !important;
+        }
+
+        .w3-text-vet-dark {
+            color: #063154 !important;
+        }
+
+        /* Componentes */
+        .btn-rounded {
+            border-radius: 8px;
+        }
+
+        .card-rounded {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .input-rounded {
+            border-radius: 8px;
+            border: 1px solid #bcc5cc;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .input-rounded:focus {
+            border-color: #2f9d94;
+            outline: none;
+        }
+
+        .material-symbols-outlined {
+            vertical-align: middle;
+        }
+
+                /* Hover Effect */
+        .hover-effect:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .material-symbols-outlined {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body class="w3-vet-light-bg">
+
+    <!-- HEADER UNIFICADO -->
+    <header class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card"
+            style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="w3-bar-item">
+                <div style="display: flex; align-items: center; gap: 5px;">
+                    <!-- LOGO SOLICITADO -->
+                    <div class="w3-text-vet-primary" style="width: 40px;">
+                        <span class="material-symbols-outlined w3-xxlarge">pets</span>
+                    </div>
+                    <span class="w3-xlarge w3-text-black" style="font-weight: bold;">VetCare</span>
+                </div>
+            </div>
+            <div class="w3-hide-small w3-hide-medium">
+                <a href="inicio.html" class="w3-bar-item w3-button w3-hover-white w3-hover-text-teal">Inicio</a>
+                <a href="listado-campañas.html"
+                    class="w3-bar-item w3-button w3-hover-white w3-hover-text-teal">Campañas</a>
+                <a href="perfil.html" class="w3-bar-item w3-button w3-hover-white w3-hover-text-teal">Mis Turnos</a>
+            </div>
+            <div class="w3-bar-item">
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-right"
+                    onclick="toggleMenu()">
+                    <span class="material-symbols-outlined">menu</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MENÚ MÓVIL -->
+        <div id="mobileMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-card-4 w3-animate-top">
+            <a href="inicio.html" class="w3-bar-item w3-button">Inicio</a>
+            <a href="listado-campañas.html" class="w3-bar-item w3-button">Campañas</a>
+            <a href="perfil.html" class="w3-bar-item w3-button">Mis Turnos</a>
+        </div>
+    </header>
+
+
+    <div class="w3-content w3-center" style="max-width:450px; margin-top:100px; margin-bottom: 50px;">
+
+        <div class="w3-white w3-card card-rounded w3-left-align">
+            
+            <div class="w3-row w3-border-bottom">
+                <a href="javascript:void(0)" onclick="openTab('login')" id="tab-login" 
+                    class="w3-col s6 w3-center w3-button w3-large w3-text-vet-dark" 
+                    style="font-weight: bold; border-bottom: 3px solid #063154;">
+                    Ingresar
+                </a>
+                <a href="javascript:void(0)" onclick="openTab('register')" id="tab-register" 
+                    class="w3-col s6 w3-center w3-button w3-large w3-text-grey">
+                    Registrarse
+                </a>
+            </div>
+
+            <div class="w3-container w3-padding-32">
+                
+                <div id="login" class="w3-animate-opacity">
+                    <h2 class="w3-large w3-text-vet-dark" style="font-weight: 700;">Accede a tu cuenta</h2>
+                    <p class="w3-small w3-text-grey">Ingresa tus credenciales para gestionar tus turnos.</p>
+
+                    <form action="inicio.html" method="post" class="w3-container w3-padding-0 w3-margin-top">
+                        <p>
+                            <label class="w3-text-vet-dark" style="font-weight: 500;">Email</label>
+                            <input class="input-rounded w3-margin-top" type="email" placeholder="tu.email@ejemplo.com" required>
+                        </p>
+                        <p>
+                            <label class="w3-text-vet-dark" style="font-weight: 500;">Contraseña</label>
+                            <input class="input-rounded w3-margin-top" type="password" placeholder="Ingresa tu contraseña" required>
+                        </p>
+                        <p class="w3-right-align">
+                            <a href="#" class="w3-small w3-text-vet-primary">¿Olvidaste tu contraseña?</a>
+                        </p>
+                        <button type="submit" class="w3-button w3-block w3-vet-dark btn-rounded w3-padding-large w3-margin-top w3-hover-opacity">
+                            <b>Ingresar</b>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="register" class="w3-hide w3-animate-opacity">
+                    <h2 class="w3-large w3-text-vet-dark" style="font-weight: 700;">Crea tu cuenta VetCare</h2>
+                    <p class="w3-small w3-text-grey">Es rápido y fácil. Solo necesitamos unos pocos datos.</p>
+
+                    <form action="inicio.html" method="post" class="w3-container w3-padding-0 w3-margin-top">
+                        <p>
+                            <label class="w3-text-vet-dark" style="font-weight: 500;">Nombre Completo</label>
+                            <input class="input-rounded w3-margin-top" type="text" placeholder="Ej. Ana García" required>
+                        </p>
+                        <p>
+                            <label class="w3-text-vet-dark" style="font-weight: 500;">Email</label>
+                            <input class="input-rounded w3-margin-top" type="email" placeholder="tu.email@ejemplo.com" required>
+                        </p>
+                        <p>
+                            <label class="w3-text-vet-dark" style="font-weight: 500;">Teléfono</label>
+                            <input class="input-rounded w3-margin-top" type="tel" placeholder="Ej. +54 9 11 12345678">
+                        </p>
+                        <p>
+                            <label class="w3-text-vet-dark" style="font-weight: 500;">Contraseña</label>
+                            <input class="input-rounded w3-margin-top" type="password" placeholder="Crea una contraseña segura" required>
+                        </p>
+                        
+                        <p class="w3-small w3-text-grey w3-margin-top">
+                            Al registrarte, aceptas nuestros <a href="#" class="w3-text-vet-primary">Términos y Condiciones</a>.
+                        </p>
+
+                        <button type="submit" class="w3-button w3-block w3-vet-primary btn-rounded w3-padding-large w3-margin-top w3-hover-opacity">
+                            <b>Registrarme</b>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER-->
+    <footer class="w3-white w3-border-top w3-padding-32">
+        <div class="w3-content" style="max-width: fit-content;">
+            <div class="w3-row-padding">
+
+                <!-- COLUMNA 1: Logo, Descripción y Redes Sociales -->
+                <div class="w3-col l3 m6 s12 w3-margin-bottom">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <div class="w3-text-vet-primary">
+                            <span class="material-symbols-outlined w3-xlarge">pets</span>
+                        </div>
+                        <span class="w3-large w3-text-black" style="font-weight: bold;">VetCare</span>
+                    </div>
+                    <p class="w3-small">Cuidando la salud de tus mascotas con campañas de prevención y bienestar.</p>
+
+                    <!-- REDES -->
+                    <div style="margin-top: 20px;">
+                        <!-- Facebook -->
+                        <a class="w3-text-black w3-hover-opacity"
+                            style="text-decoration: none; margin-right: 15px; cursor: pointer;">
+                            <i class="fa-brands fa-facebook w3-xlarge"></i>
+                        </a>
+                        <!-- X -->
+                        <a class="w3-text-black w3-hover-opacity"
+                            style="text-decoration: none; margin-right: 15px;  cursor: pointer;">
+                            <i class="fa-brands fa-x-twitter w3-xlarge"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a class="w3-text-black w3-hover-opacity"
+                            style="text-decoration: none; margin-right: 15px;  cursor: pointer;">
+                            <i class="fa-brands fa-instagram w3-xlarge"></i>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a class="w3-text-black w3-hover-opacity" style="text-decoration: none;  cursor: pointer;">
+                            <i class="fa-brands fa-whatsapp w3-xlarge"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- COLUMNA 2: Navegación -->
+                <div class="w3-col l3 m6 s12 w3-margin-bottom">
+                    <h5 class="w3-text-black" style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
+                        Navegación</h5>
+                    <ul class="w3-ul w3-hoverable" style="padding:0; border:0;">
+                        <li style="padding: 5px 0; border:0;">Inicio</li>
+                        <li style="padding: 5px 0; border:0;">Campañas</li>
+                        <li style="padding: 5px 0; border:0;">Mis Turnos</li>
+                    </ul>
+                </div>
+
+                <!-- COLUMNA 3: Legal -->
+                <div class="w3-col l3 m6 s12 w3-margin-bottom">
+                    <h5 class="w3-text-black" style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
+                        Legal</h5>
+                    <ul class="w3-ul" style="padding:0; border:0;">
+                        <li style="padding: 5px 0; border:0;">Términos de Servicio</li>
+                        <li style="padding: 5px 0; border:0;">Política de Privacidad</li>
+                    </ul>
+                </div>
+
+                <!-- COLUMNA 4: Contacto -->
+                <div class="w3-col l3 m6 s12 w3-margin-bottom">
+                    <h5 class="w3-text-black" style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
+                        Contacto</h5>
+                    <ul class="w3-ul w3-small" style="padding:0; border:0;">
+                        <li style="padding: 5px 0; border:0;">+54 9 11 1234-5678</li>
+                        <li style="padding: 5px 0; border:0;">contacto@vetcare.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w3-border-top w3-margin-top w3-padding-16 w3-center">
+                <p class="w3-small">© 2025 VetCare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+
+                function toggleMenu() {
+            var x = document.getElementById("mobileMenu");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // Función para cambiar entre las pestañas de Login y Registro
+        function openTab(tabName) {
+            var i, x, tabs;
+            
+            // Oculta todos los formularios de contenido
+            x = document.getElementsByClassName("w3-animate-opacity");
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.add('w3-hide');
+            }
+
+            // Remueve el estilo activo de todas las pestañas
+            tabs = document.querySelectorAll('.w3-row a');
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('w3-text-vet-dark');
+                tabs[i].classList.add('w3-text-grey');
+                tabs[i].style.borderBottom = "none";
+            }
+            
+            // Muestra el formulario actual
+            document.getElementById(tabName).classList.remove('w3-hide');
+
+            // Aplica el estilo activo a la pestaña actual
+            document.getElementById('tab-' + tabName).classList.remove('w3-text-grey');
+            document.getElementById('tab-' + tabName).classList.add('w3-text-vet-dark');
+            document.getElementById('tab-' + tabName).style.borderBottom = "3px solid #063154";
+        }
+
+        // Inicia con la pestaña de Login abierta por defecto
+        document.addEventListener("DOMContentLoaded", function() {
+            openTab('login');
+        });
+    </script>
+</body>
+
+</html>
