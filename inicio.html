@@ -12,91 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        /* ESTILOS COMUNES PARA TODAS LAS PANTALLAS */
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Lexend", sans-serif;
-        }
+    <link rel="stylesheet" href="estilos.css">
 
-        /* Paleta de Colores Solicitada */
-        body {
-            background-color: #f7f6f2;
-            color: #000000;
-        }
-
-        /* Primario: #2f9d94 */
-        .w3-vet-primary {
-            background-color: #2f9d94 !important;
-            color: white !important;
-        }
-
-        .w3-text-vet-primary {
-            color: #2f9d94 !important;
-        }
-
-        .w3-border-vet-primary {
-            border-color: #2f9d94 !important;
-        }
-
-        /* Secundarios y Neutros */
-        .w3-vet-dark {
-            background-color: #063154 !important;
-            color: white !important;
-        }
-
-        .w3-text-vet-dark {
-            color: #063154 !important;
-        }
-
-        .w3-vet-deep {
-            background-color: #025f67 !important;
-        }
-
-        .w3-text-vet-deep {
-            color: #025f67 !important;
-        }
-
-        .w3-vet-grey {
-            color: #bcc5cc !important;
-        }
-
-        .w3-border-vet-grey {
-            border-color: #bcc5cc !important;
-        }
-
-        /* Componentes */
-        .btn-rounded {
-            border-radius: 50px;
-        }
-
-        .card-rounded {
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #bcc5cc;
-        }
-
-        .input-rounded {
-            border-radius: 12px;
-            border: 1px solid #bcc5cc;
-        }
-
-        /* Hover Effect */
-        .hover-effect:hover {
-            transform: translateY(-5px);
-            transition: 0.3s;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        .material-symbols-outlined {
-            vertical-align: middle;
-        }
-    </style>
 </head>
 
 <body>
@@ -241,7 +158,8 @@
             </div> -->
 
         <!-- SOBRE NOSOTROS -->
-        <div class="w3-container w3-padding-64" id="sobre-nosotros" style="background-color: #ffffff;">
+        <div class="w3-container w3-padding-64" id="sobre-nosotros"
+            style="background-color: #ffffff; border-radius: 12px;">
             <div class="w3-row-padding" style="display: flex; flex-wrap: wrap; align-items: center;">
 
                 <!-- COLUMNA IMAGEN (Izquierda en PC / Arriba en Móvil) -->
@@ -256,7 +174,8 @@
                 <div class="w3-col m6 s12 w3-padding-large">
                     <span class="w3-text-vet-primary w3-large"
                         style="font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Sobre VetCare</span>
-                    <h2 class="w3-text-vet-dark" style="font-weight: bold; font-size: 2.5rem; margin-top: 5px;">
+                    <h2 class="w3-text-vet-dark titulo-about"
+                        style="font-weight: bold; font-size: 2.5rem; margin-top: 5px;">
                         Pasión por el bienestar de tu mascota
                     </h2>
                     <p class="w3-text-grey w3-large">
