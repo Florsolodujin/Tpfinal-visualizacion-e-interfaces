@@ -83,7 +83,6 @@
 
 <body>
 
-    <!-- HEADER -->
     <header class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card"
             style="display: flex; align-items: center; justify-content: space-between;">
@@ -121,7 +120,6 @@
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
     <div class="w3-content w3-container" style="max-width:1200px; margin-top: 100px; margin-bottom: 40px;">
 
         <div class="w3-margin-bottom w3-padding-small">
@@ -130,7 +128,6 @@
         </div>
 
         <div class="w3-row-padding w3-margin-top">
-            <!-- FILTROS -->
             <div class="w3-col l3 w3-margin-bottom">
                 <div class="w3-white w3-card card-rounded w3-padding-large">
                     <div class="w3-row w3-margin-bottom">
@@ -139,7 +136,7 @@
                         </div>
                         <div class="w3-col s6 w3-right-align">
                             <button class="w3-button w3-text-vet-primary w3-padding-small"
-                                style="text-decoration: underline;">Limpiar</button>
+                                style="text-decoration: underline;" onclick="limpiarFiltros()">Limpiar</button>
                         </div>
                     </div>
 
@@ -147,28 +144,25 @@
                     <div class="w3-container w3-white w3-round-lg w3-border w3-border-light w3-padding-small"
                         style="margin-top: 5px; margin-bottom: 15px; display: flex; align-items: center;">
                         <span class="material-symbols-outlined w3-text-grey">search</span>
-                        <input class="w3-input w3-border-0" type="text" placeholder="Buscar..." id="location-search">
+                        <input class="w3-input w3-border-0" type="text" placeholder="Buscar..." id="city-filter">
                     </div>
 
                     <p class="w3-text-black" style="font-weight: 600;">Tipo de Campaña</p>
                     <select class="w3-select w3-white w3-round-lg w3-border w3-border-light w3-padding w3-margin-bottom"
-                        style="margin-top: 5px;">
-                        <option value="" disabled selected>Selecciona</option>
-                        <option>Todas</option>
-                        <option>Vacunación</option>
-                        <option>Castración</option>
+                        style="margin-top: 5px;" id="type-filter">
+                        <option value="Todas" selected>Todas</option>
+                        <option value="Vacunación">Vacunación</option>
+                        <option value="Castración">Castración</option>
                     </select>
 
                     <button class="w3-button w3-block w3-vet-primary w3-text-white w3-round-lg w3-margin-top"
-                        style="font-weight: bold;">Aplicar Filtros</button>
+                        style="font-weight: bold;" onclick="aplicarFiltros()">Aplicar Filtros</button>
                 </div>
             </div>
 
-            <!-- RESULTADOS -->
             <div class="w3-col l9">
-                <div class="w3-row-padding">
-                    <!-- Item 1 -->
-                    <div class="w3-col m6 w3-margin-bottom">
+                <div id="campaign-results" class="w3-row-padding">
+                    <div class="campaign-card w3-col m6 w3-margin-bottom" data-tipo="Vacunación" data-ubicacion="Veterinario Municipal">
                         <div class="w3-white w3-card card-rounded w3-hover-shadow" style="overflow: hidden;">
                             <div class="w3-display-container"
                                 style="height: 160px; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1oTMpdkhDsMO5yTJoxbdBtIXtEr8U-rnrO9qfnAhtqWwPS6SPFT2i__D-MdCxSo0W5xAzKxU3dTeMgONshW6BsBlPw1a3_g4YgBtIRgtKMxbpGR9_P3XZa3oypsYHqV-w6lxdaX5Hy_WyrC-15a_h-0gCfmph6J8tBgYSjoZGig9EtVfjE2exFa0jVNLxwlKVkdvDxVKlhh2DH9Ze9sG9CIFEAbD5ASC5M0CGX8N21dB_teHQYVfVdJZYWl9S-38wIPqKiy6UqLs'); background-size: cover; background-position: center;">
@@ -186,8 +180,7 @@
                                     <div class="w3-row w3-margin-bottom">
                                         <div class="w3-col s1"><span
                                                 class="material-symbols-outlined">location_on</span></div>
-                                        <div class="w3-col s11">Centro Veterinario
-                                            Municipal</div>
+                                        <div class="w3-col s11">Centro Veterinario Municipal</div>
                                     </div>
                                     <div class="w3-row">
                                         <div class="w3-col s1"><span class="material-symbols-outlined">sell</span></div>
@@ -204,8 +197,7 @@
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
-                    <div class="w3-col m6 w3-margin-bottom">
+                    <div class="campaign-card w3-col m6 w3-margin-bottom" data-tipo="Castración" data-ubicacion="Patitas Felices">
                         <div class="w3-white w3-card card-rounded w3-hover-shadow" style="overflow: hidden;">
                             <div class="w3-display-container"
                                 style="height: 160px; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2jUgVoAS0cDUGyXbQLEyJ0nKKsOHCSOnwiSs_K5XzyK3LHx7FSiKqCNLNw9Yek6WAWS7xEaKtK8L_-F5QN3jf6VhFUXyvAUE2HUa7OG17hIos1GCrmNp-hwsFO2DjpJ7c1wSkfXHJJrqfzO0xmaw2bM3-IIEobXglMRLCPtS7YjrUVJkaLxz-UBPe88B-GJmVstKE19IeZh9p9638x6CQAwPK6sGElcK-lVn1hZaFyeeE6Hy6Aq16nyCEXs4VvkgAl3FA_mgoNjI'); background-size: cover; background-position: center;">
@@ -236,17 +228,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    </div>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER-->
     <footer class="w3-white w3-border-top w3-padding-32">
         <div class="w3-content" style="max-width:fit-content;">
             <div class="w3-row-padding">
 
-                <!-- COLUMNA 1: Logo, Descripción y Redes Sociales -->
                 <div class="w3-col l3 m6 s12 w3-margin-bottom">
                     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
                         <div class="w3-text-vet-primary">
@@ -256,24 +247,19 @@
                     </div>
                     <p class="w3-small">Cuidando la salud de tus mascotas con campañas de prevención y bienestar.</p>
 
-                    <!-- REDES -->
                     <div style="margin-top: 20px;">
-                        <!-- Facebook -->
                         <a class="w3-text-black w3-hover-opacity"
                             style="text-decoration: none; margin-right: 15px; cursor: pointer;">
                             <i class="fa-brands fa-facebook w3-xlarge"></i>
                         </a>
-                        <!-- X -->
                         <a class="w3-text-black w3-hover-opacity"
                             style="text-decoration: none; margin-right: 15px;  cursor: pointer;">
                             <i class="fa-brands fa-x-twitter w3-xlarge"></i>
                         </a>
-                        <!-- Instagram -->
                         <a class="w3-text-black w3-hover-opacity"
                             style="text-decoration: none; margin-right: 15px;  cursor: pointer;">
                             <i class="fa-brands fa-instagram w3-xlarge"></i>
                         </a>
-                        <!-- WhatsApp -->
                         <a class="w3-text-black w3-hover-opacity" style="text-decoration: none;  cursor: pointer;">
                             <i class="fa-brands fa-whatsapp w3-xlarge"></i>
                         </a>
@@ -281,7 +267,6 @@
 
                 </div>
 
-                <!-- COLUMNA 2: Navegación -->
                 <div class="w3-col l3 m6 s12 w3-margin-bottom">
                     <h5 class="w3-text-black" style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
                         Navegación</h5>
@@ -292,7 +277,6 @@
                     </ul>
                 </div>
 
-                <!-- COLUMNA 3: Legal -->
                 <div class="w3-col l3 m6 s12 w3-margin-bottom">
                     <h5 class="w3-text-black" style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
                         Legal</h5>
@@ -302,7 +286,6 @@
                     </ul>
                 </div>
 
-                <!-- COLUMNA 4: Contacto -->
                 <div class="w3-col l3 m6 s12 w3-margin-bottom">
                     <h5 class="w3-text-black" style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
                         Contacto</h5>
@@ -326,6 +309,70 @@
                 x.className += " w3-show";
             } else {
                 x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // FUNCIÓN PRINCIPAL DE FILTRADO
+        function aplicarFiltros() {
+            // 1. Obtener valores de los filtros
+            const filtroCiudad = document.getElementById('city-filter').value.toLowerCase().trim();
+            const filtroTipo = document.getElementById('type-filter').value;
+            const tarjetas = document.querySelectorAll('.campaign-card');
+
+            // 2. Iterar sobre cada tarjeta de campaña
+            tarjetas.forEach(card => {
+                const tipoCampana = card.getAttribute('data-tipo');
+                const ubicacionCampana = card.getAttribute('data-ubicacion').toLowerCase();
+                let mostrar = true;
+
+                // FILTRO POR TIPO DE CAMPAÑA
+                if (filtroTipo !== 'Todas' && tipoCampana !== filtroTipo) {
+                    mostrar = false;
+                }
+
+                // FILTRO POR UBICACIÓN
+                if (filtroCiudad && !ubicacionCampana.includes(filtroCiudad)) {
+                    mostrar = false;
+                }
+
+                // 3. Mostrar u ocultar la tarjeta
+                if (mostrar) {
+                    card.style.display = 'block'; // Mostrar la tarjeta
+                } else {
+                    card.style.display = 'none'; // Ocultar la tarjeta
+                }
+            });
+
+            // Opcional: Mostrar un mensaje si no hay resultados
+            actualizarMensajeResultados(tarjetas);
+        }
+        
+        // FUNCIÓN PARA LIMPIAR FILTROS
+        function limpiarFiltros() {
+            document.getElementById('city-filter').value = '';
+            document.getElementById('type-filter').value = 'Todas'; // Restablece a "Todas"
+            aplicarFiltros(); // Vuelve a aplicar filtros para mostrar todas las tarjetas
+        }
+
+        // FUNCIÓN PARA MOSTRAR MENSAJE DE SIN RESULTADOS (Mejora UX)
+        function actualizarMensajeResultados(tarjetas) {
+            const resultadosVisibles = Array.from(tarjetas).filter(card => card.style.display !== 'none').length;
+            let mensajeContainer = document.getElementById('no-results-message');
+
+            if (!mensajeContainer) {
+                // Si el mensaje no existe, créalo dentro del contenedor de resultados
+                const resultsContainer = document.getElementById('campaign-results');
+                mensajeContainer = document.createElement('div');
+                mensajeContainer.id = 'no-results-message';
+                mensajeContainer.className = 'w3-panel w3-pale-red w3-round-large w3-border w3-border-red w3-text-red w3-padding';
+                mensajeContainer.innerHTML = '<p>🛑 No se encontraron campañas que coincidan con los filtros seleccionados.</p>';
+                resultsContainer.appendChild(mensajeContainer);
+            }
+
+            if (resultadosVisibles === 0) {
+                mensajeContainer.style.display = 'block';
+            } else {
+                mensajeContainer.style.display = 'none';
             }
         }
     </script>
