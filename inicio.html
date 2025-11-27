@@ -13,6 +13,10 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* ESTILOS COMUNES PARA TODAS LAS PANTALLAS */
         body,
         h1,
@@ -102,7 +106,7 @@
 <body>
 
     <!-- HEADER UNIFICADO -->
-    <header class="w3-top">
+    <header class="w3-top" id="headerInicio">
         <div class="w3-bar w3-white w3-padding w3-card"
             style="display: flex; align-items: center; justify-content: space-between;">
             <div class="w3-bar-item">
@@ -197,9 +201,9 @@
                             <h3 class="w3-text-black" style="font-size: 1.2rem; font-weight: bold;">Esterilización
                                 Felina</h3>
                             <p class="w3-small">Ayuda a controlar la población de gatos y mejora su calidad de vida.</p>
-                            <button
+                            <a href="campaña-esterilizacion-felina.html"
                                 class="w3-button w3-block w3-pale-blue w3-text-vet-primary btn-rounded w3-margin-top"><b>Ver
-                                    más</b></button>
+                                    más</b></button></a>
                         </div>
                     </div>
                 </div>
@@ -213,9 +217,9 @@
                             </h3>
                             <p class="w3-small">Cuida la sonrisa de tu perro con chequeos y limpiezas a precios
                                 especiales.</p>
-                            <button
+                            <a href="campaña-salud-dental-canina.html"
                                 class="w3-button w3-block w3-pale-blue w3-text-vet-primary btn-rounded w3-margin-top"><b>Ver
-                                    más</b></button>
+                                    más</b></button></a>
                         </div>
                     </div>
                 </div>
@@ -425,9 +429,15 @@
                     <h5 class="w3-text-black" style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
                         Navegación</h5>
                     <ul class="w3-ul w3-hoverable" style="padding:0; border:0;">
-                        <li style="padding: 5px 0; border:0;">Inicio</li>
-                        <li style="padding: 5px 0; border:0;">Campañas</li>
-                        <li style="padding: 5px 0; border:0;">Mis Turnos</li>
+                        <li style="padding: 5px 0; border:0;">
+                            <a href="#top" style="text-decoration:none; color:black;">Inicio</a>
+                        </li>
+                        <li style="padding: 5px 0; border:0;">
+                            <a href="listado-campañas.html" style="text-decoration:none; color:black;">Campañas</a>
+                        </li>
+                        <li style="padding: 5px 0; border:0;">
+                            <a href="mis-turnos.html" style="text-decoration:none; color:black;">Mis Turnos</a>
+                        </li>
                     </ul>
                 </div>
 

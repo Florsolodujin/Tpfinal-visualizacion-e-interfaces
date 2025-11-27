@@ -13,6 +13,15 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #location-search:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
         body,
         h1,
         h2,
@@ -78,6 +87,11 @@
         .material-symbols-outlined {
             vertical-align: middle;
         }
+
+         input::selection {
+        background: #2f9d94;
+        color: white;
+    }
     </style>
 </head>
 
@@ -143,11 +157,28 @@
                         </div>
                     </div>
 
-                    <p class="w3-text-black" style="font-weight: 600;">Barrio/Ciudad</p>
+                    <p class="w3-text-black" style="font-weight: 600;">Localidad</p>
                     <div class="w3-container w3-white w3-round-lg w3-border w3-border-light w3-padding-small"
                         style="margin-top: 5px; margin-bottom: 15px; display: flex; align-items: center;">
                         <span class="material-symbols-outlined w3-text-grey">search</span>
-                        <input class="w3-input w3-border-0" type="text" placeholder="Buscar..." id="location-search">
+                        <select class="w3-input w3-border-0" id="location-search">
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option>20 de Junio</option>
+                            <option>Aldo Bonzi</option>
+                            <option>Ciudad Evita</option>
+                            <option>González Catán</option>
+                            <option>Gregorio de Laferrere</option>
+                            <option>Isidro Casanova</option>
+                            <option>La Tablada</option>
+                            <option>Lomas del Mirador</option>
+                            <option>Rafael Castillo</option>
+                            <option>Ramos Mejía</option>
+                            <option>San Justo</option>
+                            <option>Tapiales</option>
+                            <option>Villa Luzuriaga</option>
+                            <option>Villa Madero</option>
+                            <option>Virrey del Pino</option>
+                        </select>
                     </div>
 
                     <p class="w3-text-black" style="font-weight: 600;">Tipo de Campaña</p>
@@ -157,6 +188,7 @@
                         <option>Todas</option>
                         <option>Vacunación</option>
                         <option>Castración</option>
+                        <option>Otras</option>
                     </select>
 
                     <button class="w3-button w3-block w3-vet-primary w3-text-white w3-round-lg w3-margin-top"
@@ -171,7 +203,7 @@
                     <div class="w3-col m6 w3-margin-bottom">
                         <div class="w3-white w3-card card-rounded w3-hover-shadow" style="overflow: hidden;">
                             <div class="w3-display-container"
-                                style="height: 160px; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1oTMpdkhDsMO5yTJoxbdBtIXtEr8U-rnrO9qfnAhtqWwPS6SPFT2i__D-MdCxSo0W5xAzKxU3dTeMgONshW6BsBlPw1a3_g4YgBtIRgtKMxbpGR9_P3XZa3oypsYHqV-w6lxdaX5Hy_WyrC-15a_h-0gCfmph6J8tBgYSjoZGig9EtVfjE2exFa0jVNLxwlKVkdvDxVKlhh2DH9Ze9sG9CIFEAbD5ASC5M0CGX8N21dB_teHQYVfVdJZYWl9S-38wIPqKiy6UqLs'); background-size: cover; background-position: center;">
+                                style="height: 160px; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBxQpxJr8wLegdhuwrq70DG_irXhA_hMk9evkLrQx7JiDk7xCQm_-vRFnUAxttDyiiMK9zrSbqSLzSVy5JFaIHjtCk5Qdj3lVGdspjIAh2ulxresVA81S46sqrMrAWwtchErFcQTIWAq1nRvbEML_MGCHHNwF981YjjbYLz0nALVEIfBjKmdMzeUyNfSL6f35MbEgD9ZQ05qwiO969hFn-TUZz7LFBoy6clvQP8gGRigjl5KrcHrDIoIUNm42QYVAlP8ovpARxUz8'); background-size: cover; background-position: 50% 45%;">
                             </div>
                             <div class="w3-container w3-padding-large"
                                 style="display: flex; flex-direction: column; height: 250px;">
@@ -208,7 +240,80 @@
                     <div class="w3-col m6 w3-margin-bottom">
                         <div class="w3-white w3-card card-rounded w3-hover-shadow" style="overflow: hidden;">
                             <div class="w3-display-container"
-                                style="height: 160px; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2jUgVoAS0cDUGyXbQLEyJ0nKKsOHCSOnwiSs_K5XzyK3LHx7FSiKqCNLNw9Yek6WAWS7xEaKtK8L_-F5QN3jf6VhFUXyvAUE2HUa7OG17hIos1GCrmNp-hwsFO2DjpJ7c1wSkfXHJJrqfzO0xmaw2bM3-IIEobXglMRLCPtS7YjrUVJkaLxz-UBPe88B-GJmVstKE19IeZh9p9638x6CQAwPK6sGElcK-lVn1hZaFyeeE6Hy6Aq16nyCEXs4VvkgAl3FA_mgoNjI'); background-size: cover; background-position: center;">
+                                style="height: 160px; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNebL6mWpynWPmytZyBXyBjwd-CKTet4FGPCY3GWdi5NdwOmoB5DKcsSbqhVYsQi7sNmfAzlczD7yjCEPKZJ7AaZDjKMPp06vG_-UvzGVsMUV5AkZOZrt0NRfF341ji1QCMvNySq_8WNMbHkJASRequE0Ya5gKuh8ZT7iBIv_x5ESt92Y2-o2fooFGYJlPhYXGZ7T0BVLPqxcrtPwaYzvlB8_5jNPjML1jOGLguEuI0V8cDuXkOwIjx3NgLic5HHc6gJjPc2x-rrc'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="w3-container w3-padding-large"
+                                style="display: flex; flex-direction: column; height: 250px;">
+                                <h3 class="w3-large w3-text-black" style="font-weight: bold;">Salud Dental Canina
+                                </h3>
+                                <div class="w3-small w3-text-grey w3-margin-top" style="flex-grow: 1;">
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col s1"><span
+                                                class="material-symbols-outlined">calendar_today</span></div>
+                                        <div class="w3-col s11">29 de Noviembre, 2025</div>
+                                    </div>
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col s1"><span
+                                                class="material-symbols-outlined">location_on</span></div>
+                                        <div class="w3-col s11">Centro Veterinario
+                                            Municipal</div>
+                                    </div>
+                                    <div class="w3-row">
+                                        <div class="w3-col s1"><span class="material-symbols-outlined">sell</span></div>
+                                        <div class="w3-col s11"><span
+                                                class="w3-tag w3-badge-secondary w3-round-large">Otros</span></div>
+                                    </div>
+                                </div>
+                                <a href="campaña-salud-dental-canina.html"text-decoration: none;">
+                                    <button
+                                        class="w3-button w3-block w3-vet-primary w3-text-white w3-round-lg w3-margin-top"
+                                        style="font-weight: bold;">Ver Detalles</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="w3-col m6 w3-margin-bottom">
+                        <div class="w3-white w3-card card-rounded w3-hover-shadow" style="overflow: hidden;">
+                            <div class="w3-display-container"
+                                style="height: 160px; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMjmxfV4JkxS0lGvn8UdpxG2i-x1riVor_xDIwPQJRWQoPAghNJAYphyhJZWsK2dchQrfxtDkLPpNwZXtcZLk9tVOAYenN-ynC3zDeWpwe05PtrhATlZ2Tk-4n-1LjjLqhWt-idqcr5qOmq3_fOYFiIBLIUzbEsFUQp0lG-3Cg5d2BEIPio89M_--3n8HLiOQfl1abrJP2tXokPIJcOJnNWIWcvIgNA9DHJBxsQAX-Vjpsu0x52mahUHaHuabNsASmVDD2cRs0jCw'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="w3-container w3-padding-large"
+                                style="display: flex; flex-direction: column; height: 250px;">
+                                <h3 class="w3-large w3-text-black" style="font-weight: bold;">Esterilización Felina</h3>
+                                <div class="w3-small w3-text-grey w3-margin-top" style="flex-grow: 1;">
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col s1"><span
+                                                class="material-symbols-outlined">calendar_today</span></div>
+                                        <div class="w3-col s11">30 de Noviembre, 2025</div>
+                                    </div>
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col s1"><span
+                                                class="material-symbols-outlined">location_on</span></div>
+                                        <div class="w3-col s11">Centro Veterinario
+                                            Municipal</div>
+                                    </div>
+                                    <div class="w3-row">
+                                        <div class="w3-col s1"><span class="material-symbols-outlined">sell</span></div>
+                                        <div class="w3-col s11"><span
+                                                class="w3-tag w3-badge-secondary w3-round-large">Castración</span></div>
+                                    </div>
+                                </div>
+                                <a href="campaña-esterilizacion-felina.html" style="text-decoration: none;">
+                                    <button
+                                        class="w3-button w3-block w3-vet-primary w3-text-white w3-round-lg w3-margin-top"
+                                        style="font-weight: bold;">Ver Detalles</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="w3-col m6 w3-margin-bottom">
+                        <div class="w3-white w3-card card-rounded w3-hover-shadow" style="overflow: hidden;">
+                            <div class="w3-display-container"
+                                style="height: 160px; background-image: url(img/campaña-castracion-img.png); background-size: cover; background-position: 50%;">
                             </div>
                             <div class="w3-container w3-padding-large"
                                 style="display: flex; flex-direction: column; height: 250px;">
@@ -222,7 +327,7 @@
                                     <div class="w3-row w3-margin-bottom">
                                         <div class="w3-col s1"><span
                                                 class="material-symbols-outlined">location_on</span></div>
-                                        <div class="w3-col s11">Centro de Salud 'Patitas Felices'</div>
+                                        <div class="w3-col s11">Centro Veterinario Municipal</div>
                                     </div>
                                     <div class="w3-row">
                                         <div class="w3-col s1"><span class="material-symbols-outlined">sell</span></div>
@@ -230,9 +335,11 @@
                                                 class="w3-tag w3-badge-secondary w3-round-large">Castración</span></div>
                                     </div>
                                 </div>
-                                <button
-                                    class="w3-button w3-block w3-vet-primary w3-text-white w3-round-lg w3-margin-top"
-                                    style="font-weight: bold;">Ver Detalles</button>
+                                <a href="campaña-castracion.html" style="text-decoration: none;">
+                                    <button
+                                        class="w3-button w3-block w3-vet-primary w3-text-white w3-round-lg w3-margin-top"
+                                        style="font-weight: bold;">Ver Detalles</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -286,8 +393,12 @@
                     <h5 class="w3-text-black" style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
                         Navegación</h5>
                     <ul class="w3-ul w3-hoverable" style="padding:0; border:0;">
-                        <li style="padding: 5px 0; border:0;">Inicio</li>
-                        <li style="padding: 5px 0; border:0;">Campañas</li>
+                         <li style="padding: 5px 0; border:0;">
+                            <a href="inicio.html" style="text-decoration:none; color:black;">Inicio</a>
+                        </li>
+                         <li style="padding: 5px 0; border:0;">
+                            <a href="#top" style="text-decoration:none; color:black;">Campañas</a>
+                        </li>
                         <li style="padding: 5px 0; border:0;">Mis Turnos</li>
                     </ul>
                 </div>

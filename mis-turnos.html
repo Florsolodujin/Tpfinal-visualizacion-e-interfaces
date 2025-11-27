@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Mi Perfil</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lexend", sans-serif;
+        }
+
+        /* Paleta Unificada */
+        body {
+            background-color: #f7f6f2;
+            color: #000000;
+        }
+
+        .w3-vet-primary {
+            background-color: #2f9d94 !important;
+            color: white !important;
+        }
+
+        .w3-text-vet-primary {
+            color: #2f9d94 !important;
+        }
+
+        /* Componentes */
+        .card-rounded {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #bcc5cc;
+        }
+
+        .w3-round-xl {
+            border-radius: 12px !important;
+        }
+
+        .w3-round-lg {
+            border-radius: 8px !important;
+        }
+
+        .w3-border-light {
+            border-color: #bcc5cc !important;
+        }
+
+        /* Efecto hover suave rojo para cancelar */
+        .w3-hover-red-soft:hover {
+            background-color: #ffe0e0 !important;
+            color: #d0021b !important;
+        }
+
+        .material-symbols-outlined {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER-->
+    <header class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card"
+            style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="w3-bar-item">
+                <div style="display: flex; align-items: center; gap: 5px;">
+                    <div class="w3-text-vet-primary" style="width: 40px;">
+                        <span class="material-symbols-outlined w3-xxlarge">pets</span>
+                    </div>
+                    <a href="inicio.html" style="text-decoration: none;">
+                        <span class="w3-xlarge w3-text-black" style="font-weight: bold;">VetCare</span>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-hide-small w3-hide-medium">
+                <a href="inicio.html" class="w3-bar-item w3-button w3-hover-white w3-hover-text-teal">Inicio</a>
+                <a href="listado-campañas.html"
+                    class="w3-bar-item w3-button w3-hover-white w3-hover-text-teal">Campañas</a>
+                <a href="perfil.html" class="w3-bar-item w3-button w3-hover-white w3-hover-text-teal">Mis Turnos</a>
+            </div>
+            <div class="w3-bar-item">
+                <!-- Avatar de usuario logueado en header -->
+                <div class="w3-circle w3-border w3-hide-small"
+                    style='width: 40px; height: 40px; background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_sWzsLXP2IZK1tqz9FUlmoqLqciBxTWIHteLJ1QgYLA0R7p6QW823M4bGnwMtO5AW87Bhmf286rS590aGxcAfcfjvDDMni3gGdNhopFL2D1jnn7vnBoQdiWBfNXIK8L8Xhw-sApWjeSb4I6wxKc5jl3deBUpbY0y4VeFKC-0p5IXMXPdpR42rVQ7zEqb-u58FrzxxYmaaCuwBZyC8OrP1odDSF2ieWqr3XcVEcNfUSC-Ei6ylx41NulJnLzdyIEq3uwikxoUycPE"); background-size: cover; background-position: center;'>
+                </div>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-right"
+                    onclick="toggleMenu()">
+                    <span class="material-symbols-outlined">menu</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-card-4 w3-animate-top">
+            <a href="inicio.html" class="w3-bar-item w3-button">Inicio</a>
+            <a href="listado-campañas.html" class="w3-bar-item w3-button">Campañas</a>
+            <a href="perfil.html" class="w3-bar-item w3-button">Mis Turnos</a>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL (Sin Sidebar) -->
+    <div class="w3-content" style="max-width:1200px; margin-top:100px; margin-bottom: 40px;">
+
+        <div class="w3-container">
+            <div class="w3-margin-bottom">
+                <h1 class="w3-text-black w3-xxlarge" style="font-weight: 900;">Hola</h1>
+                <p class="w3-text-grey">Gestiona tus turnos y revisa el historial de salud de tus mascotas.</p>
+            </div>
+
+            <!-- Ficha de la mascota -->
+            <div class="w3-white w3-card card-rounded w3-padding-large w3-margin-bottom">
+                <div class="w3-row w3-center-small">
+                    <div class="w3-col s12 m2 w3-center">
+                        <div class="w3-circle w3-border"
+                            style='width: 96px; height: 96px; background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_sWzsLXP2IZK1tqz9FUlmoqLqciBxTWIHteLJ1QgYLA0R7p6QW823M4bGnwMtO5AW87Bhmf286rS590aGxcAfcfjvDDMni3gGdNhopFL2D1jnn7vnBoQdiWBfNXIK8L8Xhw-sApWjeSb4I6wxKc5jl3deBUpbY0y4VeFKC-0p5IXMXPdpR42rVQ7zEqb-u58FrzxxYmaaCuwBZyC8OrP1odDSF2ieWqr3XcVEcNfUSC-Ei6ylx41NulJnLzdyIEq3uwikxoUycPE"); background-size: cover; background-position: center; margin: auto;'>
+                        </div>
+                    </div>
+                    <div class="w3-col s12 m10 w3-left-align" style="padding-left: 16px;">
+                        <p class="w3-large w3-text-black" style="font-weight: bold; margin-top: 10px;">Rocky</p>
+                        <p class="w3-text-grey">Golden Retriever</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-row-padding w3-margin-top">
+                <div class="w3-col l8 w3-margin-bottom">
+                    <!-- Tabs -->
+                    <div class="w3-bar w3-margin-bottom">
+                        <button class="w3-bar-item w3-button w3-bottombar w3-border-vet-primary w3-text-black"
+                            style="font-weight: bold; border-width: 3px !important;">Próximos Turnos</button>
+                        <button class="w3-bar-item w3-button w3-text-grey">Historial de Turnos</button>
+                    </div>
+
+                    <!-- Turno 1 -->
+                    <div class="w3-white w3-card card-rounded w3-margin-bottom w3-hover-shadow">
+                        <div class="w3-row w3-padding-large">
+                            <div class="w3-col m8 s12">
+                                <p class="w3-text-grey w3-small">Confirmado - 28/11/2025, 09:30 hs</p>
+                                <h3 class="w3-large w3-text-black" style="font-weight: bold;">Campaña de Vacunación
+                                    Antirrábica</h3>
+                                <p class="w3-text-grey w3-small w3-margin-bottom">Centro Veterinario
+                                    Municipal</p>
+                                <button
+                                    class="w3-button w3-light-grey w3-text-black w3-round-lg w3-small w3-padding-small w3-hover-red-soft">
+                                    <span class="material-symbols-outlined w3-margin-right"
+                                        style="font-size: 16px;">close</span> Cancelar Turno
+                                </button>
+                            </div>
+                            <div class="w3-col m4 s12 w3-margin-top w3-center">
+                                <div class="w3-round-lg"
+                                    style='height: 100px; background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOa01mWAPzuMgENVhtPQcdOAmhJPszGazLqwcq7jUyxchHyXzXS3MXaywpBp2lDScmqAIB1kFS99rfBzLhCLPAq2d6g0ML7Eb-cGzZ4TzKm8Z3tz9evTwINg9eMOcqn6KalaUz0FJaeBQEE808TXNaW11BHNAs3t_1TOFiM-nB9GrNG3iLyYtydXYyt5rKsOjrBX7GKRMWszVxpN6PyGfMGQ44_PWqAhRsSfpqM12HQyy4hBLPrW1-uk5mDqFee4utcU5osybPmzU"); background-size: cover; background-position: center;'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Turno 2 -->
+                    <div class="w3-white w3-card card-rounded w3-margin-bottom w3-hover-shadow">
+                        <div class="w3-row w3-padding-large">
+                            <div class="w3-col m8 s12">
+                                <p class="w3-text-grey w3-small">Confirmado - 08/12/2025, 15:00 hs</p>
+                                <h3 class="w3-large w3-text-black" style="font-weight: bold;">Control General</h3>
+                                <p class="w3-text-grey w3-small w3-margin-bottom">Centro de Salud 'Patitas Felices'</p>
+                                <button
+                                    class="w3-button w3-light-grey w3-text-black w3-round-lg w3-small w3-padding-small w3-hover-red-soft">
+                                    <span class="material-symbols-outlined w3-margin-right"
+                                        style="font-size: 16px;">close</span> Cancelar Turno
+                                </button>
+                            </div>
+                            <div class="w3-col m4 s12 w3-margin-top w3-center">
+                                <div class="w3-round-lg"
+                                    style='height: 100px; background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYhpzWF6tWHMzXoksKuiT66VU7e2uCJcKOD7HAMlcYS516vxt6Hl94sjzW-F6uJ5fm5RuUNWLP8cHsTvC86bgcPY8qzeoSaKOI7KNyreGN_C3XP1IxAgdUYF_ack9xKC077P_Yq7Xqx0WqTJxtRn1rHAKbsUle-Ccgxch0Q_gVj2ThfZoUUp1_CB9pnlAVzMdLxavSeYbiP_BTB6pGSCkt-utKhoLz7c4TJgjHJN-rVbDbCQcbu_O3jQBKMoSRGypcsJXTPWHX9sI"); background-size: cover; background-position: center;'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actividad -->
+                <div class="w3-col l4">
+                    <div class="w3-white w3-card card-rounded w3-padding-large">
+                        <h3 class="w3-large w3-text-black" style="font-weight: bold;">Tu Actividad</h3>
+                        <p class="w3-text-grey w3-small w3-margin-bottom">Servicios más utilizados en el último año.</p>
+
+                        <div class="w3-margin-bottom">
+                            <div class="w3-row w3-small w3-margin-bottom">
+                                <div class="w3-col s8">Vacunación</div>
+                                <div class="w3-col s4 w3-right-align">45%</div>
+                            </div>
+                            <div class="w3-light-grey w3-round-xl" style="height: 8px;">
+                                <div class="w3-round-xl" style="height: 8px; width: 45%; background-color: #388e3c;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-margin-bottom">
+                            <div class="w3-row w3-small w3-margin-bottom">
+                                <div class="w3-col s8">Control General</div>
+                                <div class="w3-col s4 w3-right-align">30%</div>
+                            </div>
+                            <div class="w3-light-grey w3-round-xl" style="height: 8px;">
+                                <div class="w3-round-xl" style="height: 8px; width: 30%; background-color: #1665c0;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-margin-bottom">
+                            <div class="w3-row w3-small w3-margin-bottom">
+                                <div class="w3-col s8 w3-left-align w3-text-dark-grey" style="font-weight: 500;">
+                                    Desparasitación</div>
+                                <div class="w3-col s4 w3-right-align w3-text-muted">15%</div>
+                            </div>
+                            <div class="w3-light-grey w3-round-xl" style="height: 8px;">
+                                <div class="w3-round-xl" style="height: 8px; width: 15%; background-color: #f5a623;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-margin-bottom">
+                            <div class="w3-row w3-small w3-margin-bottom">
+                                <div class="w3-col s8 w3-left-align w3-text-dark-grey" style="font-weight: 500;">
+                                    Urgencias</div>
+                                <div class="w3-col s4 w3-right-align w3-text-muted">10%</div>
+                            </div>
+                            <div class="w3-light-grey w3-round-xl" style="height: 8px;">
+                                <div class="w3-round-xl" style="height: 8px; width: 10%; background-color: #d0021b;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER-->
+        <footer class="w3-white w3-border-top w3-padding-32">
+            <div class="w3-content" style="max-width:fit-content;">
+                <div class="w3-row-padding">
+
+                    <!-- COLUMNA 1: Logo, Descripción y Redes Sociales -->
+                    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <div class="w3-text-vet-primary">
+                                <span class="material-symbols-outlined w3-xlarge">pets</span>
+                            </div>
+                            <span class="w3-large w3-text-black" style="font-weight: bold;">VetCare</span>
+                        </div>
+                        <p class="w3-small">Cuidando la salud de tus mascotas con campañas de prevención y bienestar.
+                        </p>
+
+                        <!-- REDES -->
+                        <div style="margin-top: 20px;">
+                            <!-- Facebook -->
+                            <a class="w3-text-black w3-hover-opacity"
+                                style="text-decoration: none; margin-right: 15px; cursor: pointer;">
+                                <i class="fa-brands fa-facebook w3-xlarge"></i>
+                            </a>
+                            <!-- X -->
+                            <a class="w3-text-black w3-hover-opacity"
+                                style="text-decoration: none; margin-right: 15px;  cursor: pointer;">
+                                <i class="fa-brands fa-x-twitter w3-xlarge"></i>
+                            </a>
+                            <!-- Instagram -->
+                            <a class="w3-text-black w3-hover-opacity"
+                                style="text-decoration: none; margin-right: 15px;  cursor: pointer;">
+                                <i class="fa-brands fa-instagram w3-xlarge"></i>
+                            </a>
+                            <!-- WhatsApp -->
+                            <a class="w3-text-black w3-hover-opacity" style="text-decoration: none;  cursor: pointer;">
+                                <i class="fa-brands fa-whatsapp w3-xlarge"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- COLUMNA 2: Navegación -->
+                    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+                        <h5 class="w3-text-black"
+                            style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
+                            Navegación</h5>
+                        <ul class="w3-ul w3-hoverable" style="padding:0; border:0;">
+                            <li style="padding: 5px 0; border:0;">Inicio</li>
+                            <li style="padding: 5px 0; border:0;">Campañas</li>
+                            <li style="padding: 5px 0; border:0;">Mis Turnos</li>
+                        </ul>
+                    </div>
+
+                    <!-- COLUMNA 3: Legal -->
+                    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+                        <h5 class="w3-text-black"
+                            style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
+                            Legal</h5>
+                        <ul class="w3-ul" style="padding:0; border:0;">
+                            <li style="padding: 5px 0; border:0;">Términos de Servicio</li>
+                            <li style="padding: 5px 0; border:0;">Política de Privacidad</li>
+                        </ul>
+                    </div>
+
+                    <!-- COLUMNA 4: Contacto -->
+                    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+                        <h5 class="w3-text-black"
+                            style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
+                            Contacto</h5>
+                        <ul class="w3-ul w3-small" style="padding:0; border:0;">
+                            <li style="padding: 5px 0; border:0;">+54 9 11 1234-5678</li>
+                            <li style="padding: 5px 0; border:0;">contacto@vetcare.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="w3-border-top w3-margin-top w3-padding-16 w3-center">
+                    <p class="w3-small">© 2025 VetCare. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                var x = document.getElementById("mobileMenu");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+</body>
+
+</html>
