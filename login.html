@@ -26,12 +26,13 @@
         }
 
         a {
-            text-decoration: none; 
+            text-decoration: none;
         }
 
         /* Paleta de Colores (Basada en tu definición) */
         body {
-            background-color: #f7f6f2; /* Fondo del body */
+            background-color: #f7f6f2;
+            /* Fondo del body */
             color: #000000;
         }
 
@@ -57,7 +58,7 @@
 
         /* Componentes */
         .btn-rounded {
-            border-radius: 8px;
+            border-radius: 50px;
         }
 
         .card-rounded {
@@ -82,7 +83,7 @@
             vertical-align: middle;
         }
 
-                /* Hover Effect */
+        /* Hover Effect */
         .hover-effect:hover {
             transform: translateY(-5px);
             transition: 0.3s;
@@ -136,21 +137,21 @@
     <div class="w3-content w3-center" style="max-width:450px; margin-top:100px; margin-bottom: 50px;">
 
         <div class="w3-white w3-card card-rounded w3-left-align">
-            
+
             <div class="w3-row w3-border-bottom">
-                <a href="javascript:void(0)" onclick="openTab('login')" id="tab-login" 
-                    class="w3-col s6 w3-center w3-button w3-large w3-text-vet-dark" 
+                <a href="javascript:void(0)" onclick="openTab('login')" id="tab-login"
+                    class="w3-col s6 w3-center w3-button w3-large w3-text-vet-dark"
                     style="font-weight: bold; border-bottom: 3px solid #063154;">
                     Ingresar
                 </a>
-                <a href="javascript:void(0)" onclick="openTab('register')" id="tab-register" 
+                <a href="javascript:void(0)" onclick="openTab('register')" id="tab-register"
                     class="w3-col s6 w3-center w3-button w3-large w3-text-grey">
                     Registrarse
                 </a>
             </div>
 
             <div class="w3-container w3-padding-32">
-                
+
                 <div id="login" class="w3-animate-opacity">
                     <h2 class="w3-large w3-text-vet-dark" style="font-weight: 700;">Accede a tu cuenta</h2>
                     <p class="w3-small w3-text-grey">Ingresa tus credenciales para gestionar tus turnos.</p>
@@ -158,16 +159,19 @@
                     <form action="inicio.html" method="post" class="w3-container w3-padding-0 w3-margin-top">
                         <p>
                             <label class="w3-text-vet-dark" style="font-weight: 500;">Email</label>
-                            <input class="input-rounded w3-margin-top" type="email" placeholder="tu.email@ejemplo.com" required>
+                            <input class="input-rounded w3-margin-top" type="email" placeholder="tu.email@ejemplo.com"
+                                required>
                         </p>
                         <p>
                             <label class="w3-text-vet-dark" style="font-weight: 500;">Contraseña</label>
-                            <input class="input-rounded w3-margin-top" type="password" placeholder="Ingresa tu contraseña" required>
+                            <input class="input-rounded w3-margin-top" type="password"
+                                placeholder="Ingresa tu contraseña" required>
                         </p>
                         <p class="w3-right-align">
                             <a href="#" class="w3-small w3-text-vet-primary">¿Olvidaste tu contraseña?</a>
                         </p>
-                        <button type="submit" class="w3-button w3-block w3-vet-dark btn-rounded w3-padding-large w3-margin-top w3-hover-opacity">
+                        <button type="submit"
+                            class="w3-button w3-block w3-vet-dark btn-rounded w3-padding-large w3-margin-top w3-hover-opacity">
                             <b>Ingresar</b>
                         </button>
                     </form>
@@ -180,11 +184,13 @@
                     <form action="inicio.html" method="post" class="w3-container w3-padding-0 w3-margin-top">
                         <p>
                             <label class="w3-text-vet-dark" style="font-weight: 500;">Nombre Completo</label>
-                            <input class="input-rounded w3-margin-top" type="text" placeholder="Ej. Ana García" required>
+                            <input class="input-rounded w3-margin-top" type="text" placeholder="Ej. Ana García"
+                                required>
                         </p>
                         <p>
                             <label class="w3-text-vet-dark" style="font-weight: 500;">Email</label>
-                            <input class="input-rounded w3-margin-top" type="email" placeholder="tu.email@ejemplo.com" required>
+                            <input class="input-rounded w3-margin-top" type="email" placeholder="tu.email@ejemplo.com"
+                                required>
                         </p>
                         <p>
                             <label class="w3-text-vet-dark" style="font-weight: 500;">Teléfono</label>
@@ -192,14 +198,17 @@
                         </p>
                         <p>
                             <label class="w3-text-vet-dark" style="font-weight: 500;">Contraseña</label>
-                            <input class="input-rounded w3-margin-top" type="password" placeholder="Crea una contraseña segura" required>
-                        </p>
-                        
-                        <p class="w3-small w3-text-grey w3-margin-top">
-                            Al registrarte, aceptas nuestros <a href="#" class="w3-text-vet-primary">Términos y Condiciones</a>.
+                            <input class="input-rounded w3-margin-top" type="password"
+                                placeholder="Crea una contraseña segura" required>
                         </p>
 
-                        <button type="submit" class="w3-button w3-block w3-vet-primary btn-rounded w3-padding-large w3-margin-top w3-hover-opacity">
+                        <p class="w3-small w3-text-grey w3-margin-top">
+                            Al registrarte, aceptas nuestros <a href="#" class="w3-text-vet-primary">Términos y
+                                Condiciones</a>.
+                        </p>
+
+                        <button type="submit"
+                            class="w3-button w3-block w3-vet-primary btn-rounded w3-padding-large w3-margin-top w3-hover-opacity">
                             <b>Registrarme</b>
                         </button>
                     </form>
@@ -290,7 +299,7 @@
 
     <script>
 
-                function toggleMenu() {
+        function toggleMenu() {
             var x = document.getElementById("mobileMenu");
             if (x.className.indexOf("w3-show") == -1) {
                 x.className += " w3-show";
@@ -302,7 +311,7 @@
         // Función para cambiar entre las pestañas de Login y Registro
         function openTab(tabName) {
             var i, x, tabs;
-            
+
             // Oculta todos los formularios de contenido
             x = document.getElementsByClassName("w3-animate-opacity");
             for (i = 0; i < x.length; i++) {
@@ -316,7 +325,7 @@
                 tabs[i].classList.add('w3-text-grey');
                 tabs[i].style.borderBottom = "none";
             }
-            
+
             // Muestra el formulario actual
             document.getElementById(tabName).classList.remove('w3-hide');
 
@@ -327,7 +336,7 @@
         }
 
         // Inicia con la pestaña de Login abierta por defecto
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             openTab('login');
         });
     </script>
