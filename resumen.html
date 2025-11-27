@@ -58,6 +58,12 @@
             border-color: #bcc5cc !important;
         }
 
+        .botones {
+            display: flex;
+            gap: 10px;
+            padding-top: 5px;
+        }
+
         /* Banners de Estado actualizados a la paleta */
         .w3-banner-success {
             background-color: rgba(47, 157, 148, 0.2) !important;
@@ -88,6 +94,10 @@
 
         .material-symbols-outlined {
             vertical-align: middle;
+        }
+
+        a {
+            font-style: none;
         }
     </style>
 </head>
@@ -220,14 +230,13 @@
                         </div>
                     </div>
 
-                    <div class="w3-border-top w3-border-light w3-padding-top w3-row-padding w3-margin-top"
-                        style="display: flex; flex-wrap: wrap; gap: 10px;">
-                        <!-- Botón Azul Oscuro -->
-                        <button class="w3-button w3-vet-dark btn-rounded w3-mobile w3-half"
-                            style="font-weight: bold; padding: 12px 0;">
+                    <div class="w3-border-top w3-border-light w3-padding-top w3-row-padding w3-margin-top botones">
+                        <!-- Botón Azul Oscuro como link -->
+                        <a href="calendario-nov.html" class="w3-button w3-vet-dark btn-rounded w3-mobile w3-half"
+                            style="font-weight: bold; padding: 12px 0; display:block; text-align:center;">
                             <span class="material-symbols-outlined w3-margin-right">add_to_home_screen</span>
                             Añadir a mi Calendario
-                        </button>
+                        </a>
                         <!-- Link perfil -->
                         <a href="perfil.html"
                             class="w3-button w3-white w3-border w3-border-light w3-text-black btn-rounded w3-mobile w3-half"
