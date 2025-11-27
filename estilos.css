@@ -173,7 +173,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.btn-mes {
+.btn-activo {
     font-size: 2rem;
     text-decoration: none;
     color: rgb(109, 99, 99);
@@ -186,7 +186,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.btn-mes-anterior {
+.btn-inactivo {
     color: rgba(138, 136, 136, 0.644);
     font-size: 2rem;
     text-decoration: none;
