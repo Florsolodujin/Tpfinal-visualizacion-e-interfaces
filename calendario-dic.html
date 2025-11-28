@@ -17,17 +17,17 @@
 
 <body>
 
-    <!-- HEADER -->
     <header class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card"
             style="display: flex; align-items: center; justify-content: space-between;">
             <div class="w3-bar-item">
                 <div style="display: flex; align-items: center; gap: 5px;">
-                    <!-- LOGO -->
                     <div class="w3-text-vet-primary" style="width: 40px;">
                         <span class="material-symbols-outlined w3-xxlarge">pets</span>
                     </div>
-                    <span class="w3-xlarge w3-text-black" style="font-weight: bold;">VetCare</span>
+                    <a href="inicio.html" style="text-decoration: none;">
+                        <span class="w3-xlarge w3-text-black" style="font-weight: bold;">VetCare</span>
+                    </a>
                 </div>
             </div>
             <div class="w3-hide-small w3-hide-medium">
@@ -37,7 +37,9 @@
                 <a href="perfil.html" class="w3-bar-item w3-button w3-hover-white w3-hover-text-teal">Mis Turnos</a>
             </div>
             <div class="w3-bar-item">
-                <button class="w3-button w3-vet-primary btn-rounded w3-hide-small"><b>Ingresar</b></button>
+                <div class="w3-circle w3-border w3-hide-small"
+                    style='width: 40px; height: 40px; background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfjV938Z99JLpy46FtDp0EZoGE1TOMHbibJH2gziHSTbA7-jtfkDQrNgar80-Ba55jx2lvtKm6LKn7avqJY6eyCbOrtqAsbA4euFwITiTROhNENxAko6kcKW0MnP8QqdCBuyO0QIdruvqDRqiW8pv8H9xkuOqd7rxcD9WyfC1XxFu1ZbE9P3inQSkpYdPc7PFEuzxqxRX7Xx-YTiSoNb2nXsp-3H4Qd7zz-E9sPqd7wiRZFqAK6lXPB6_0i7WpJW2ctz-3RbR9WB4"); background-size: cover; background-position: center;'>
+                </div>
                 <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-right"
                     onclick="toggleMenu()">
                     <span class="material-symbols-outlined">menu</span>
@@ -45,7 +47,6 @@
             </div>
         </div>
 
-        <!-- MENÚ MÓVIL -->
         <div id="mobileMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-card-4 w3-animate-top">
             <a href="inicio.html" class="w3-bar-item w3-button">Inicio</a>
             <a href="listado-campañas.html" class="w3-bar-item w3-button">Campañas</a>
