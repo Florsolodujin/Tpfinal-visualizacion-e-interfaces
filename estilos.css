@@ -361,3 +361,29 @@ h2 {
     background-color: transparent;
     color: #2f9d94;
 }
+
+/* Contenedor */
+.botones-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Botones */
+.boton-flex {
+    flex: 1;
+    padding: 12px 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+/*mobile: apila */
+@media (max-width: 600px) {
+    .boton-flex {
+        flex: 1 1 100%;
+    }
+}
