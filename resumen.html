@@ -146,7 +146,8 @@
                     <div class="w3-border-top w3-border-light w3-padding-top w3-row-padding w3-margin-top botones">
                         <!-- Botón Azul Oscuro como link -->
                         <a href="calendario-nov.html" class="w3-button w3-vet-dark btn-rounded w3-mobile w3-half"
-                            style="font-weight: bold; padding: 12px 0; display:block; text-align:center;" onclick="agregoElEvento()">
+                            style="font-weight: bold; padding: 12px 0; display:block; text-align:center;"
+                            onclick="agregoElEvento()">
                             <span class="material-symbols-outlined w3-margin-right">add_to_home_screen</span>
                             Añadir a mi Calendario
                         </a>
@@ -217,9 +218,15 @@
                     <h5 class="w3-text-black" style="font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
                         Navegación</h5>
                     <ul class="w3-ul w3-hoverable" style="padding:0; border:0;">
-                        <li style="padding: 5px 0; border:0;">Inicio</li>
-                        <li style="padding: 5px 0; border:0;">Campañas</li>
-                        <li style="padding: 5px 0; border:0;">Mis Turnos</li>
+                        <a href="inicio.html" style="text-decoration: none;">
+                            <li style="padding: 5px 0; border:0;">Inicio</li>
+                        </a>
+                        <a href="listado-campañas.html" style="text-decoration: none;">
+                            <li style="padding: 5px 0; border:0;">Campañas</li>
+                        </a>
+                        <a href="perfil.html" style="text-decoration: none;">
+                            <li style="padding: 5px 0; border:0;">Mis Turnos</li>
+                        </a>
                     </ul>
                 </div>
 
@@ -260,7 +267,7 @@
             }
         }
 
-        function agregoElEvento(){
+        function agregoElEvento() {
             alert("Se agregó el evento a tu calendario");
         }
     </script>

@@ -16,26 +16,26 @@ body {
 }
 
 .w3-vet-primary {
-    background-color: #2f9d94 !important;
-    color: white !important;
+    background-color: #2f9d94;
+    color: white;
 }
 
 .w3-text-vet-primary {
-    color: #2f9d94 !important;
+    color: #2f9d94;
 }
 
 .w3-border-vet-primary {
-    border-color: #2f9d94 !important;
+    border-color: #2f9d94;
 }
 
 /* Oscuro: #063154 (Azul marino) */
 .w3-vet-dark {
-    background-color: #063154 !important;
-    color: white !important;
+    background-color: #063154;
+    color: white;
 }
 
 .w3-text-vet-dark {
-    color: #063154 !important;
+    color: #063154;
 }
 
 /* Estilos específicos de componentes */
@@ -65,19 +65,19 @@ body {
 
 /* Chips y Botones de selección */
 .w3-chip-bg {
-    background-color: #e0f2f1 !important;
+    background-color: #e0f2f1;
     color: #025f67;
 }
 
 .w3-chip-hover:hover {
-    background-color: #b2dfdb !important;
+    background-color: #b2dfdb;
 }
 
 /* Selected Time Slot Style */
 .time-slot-selected {
-    background-color: #2f9d94 !important;
-    color: white !important;
-    border: 1px solid #2f9d94 !important;
+    background-color: #2f9d94;
+    color: white;
+    border: 1px solid #2f9d94;
 }
 
 .details-container {
@@ -101,21 +101,21 @@ body {
 }
 
 .w3-round-xl {
-    border-radius: 12px !important;
+    border-radius: 12px;
 }
 
 .w3-round-lg {
-    border-radius: 8px !important;
+    border-radius: 8px;
 }
 
 .w3-border-light {
-    border-color: #bcc5cc !important;
+    border-color: #bcc5cc;
 }
 
 /* Efecto hover suave rojo para cancelar */
 .w3-hover-red-soft:hover {
-    background-color: #ffe0e0 !important;
-    color: #d0021b !important;
+    background-color: #ffe0e0;
+    color: #d0021b;
 }
 
 /* Hover Effect */
@@ -126,7 +126,7 @@ body {
 }
 
 .w3-banner-success {
-    background-color: rgba(47, 157, 148, 0.2) !important;
+    background-color: rgba(47, 157, 148, 0.2);
     /* 20% opacity of primary */
     color: #000000;
     border: 1px solid #2f9d94;
@@ -363,4 +363,9 @@ h2 {
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
+}
+
+.w3-ul.w3-hoverable li:hover {
+    background-color: transparent;
+    color: #2f9d94;
 }
