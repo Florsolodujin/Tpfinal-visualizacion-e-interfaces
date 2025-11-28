@@ -345,7 +345,7 @@
                 }
             });
 
-            // Opcional: Mostrar un mensaje si no hay resultados
+            // Muestra un mensaje si no hay resultados
             actualizarMensajeResultados(tarjetas);
         }
 
@@ -356,13 +356,13 @@
             aplicarFiltros(); // Vuelve a aplicar filtros para mostrar todas las tarjetas
         }
 
-        // FUNCIÓN PARA MOSTRAR MENSAJE DE SIN RESULTADOS (Mejora UX)
+        // FUNCIÓN PARA MOSTRAR MENSAJE DE SIN RESULTADOS
         function actualizarMensajeResultados(tarjetas) {
             const resultadosVisibles = Array.from(tarjetas).filter(card => card.style.display !== 'none').length;
             let mensajeContainer = document.getElementById('no-results-message');
 
             if (!mensajeContainer) {
-                // Si el mensaje no existe, créalo dentro del contenedor de resultados
+                // Si el mensaje no existe, se crea dentro del contenedor de resultados
                 const resultsContainer = document.getElementById('campaign-results');
                 mensajeContainer = document.createElement('div');
                 mensajeContainer.id = 'no-results-message';

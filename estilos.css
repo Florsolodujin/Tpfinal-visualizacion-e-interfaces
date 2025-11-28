@@ -1,4 +1,3 @@
-/* ESTILOS*/
 body,
 h1,
 h2,
@@ -9,7 +8,7 @@ h6 {
     font-family: "Lexend", sans-serif;
 }
 
-/* Paleta de Colores */
+/* Paleta */
 body {
     background-color: #f7f6f2;
     color: #000000;
@@ -28,7 +27,7 @@ body {
     border-color: #2f9d94;
 }
 
-/* Oscuro: #063154 (Azul marino) */
+/* Oscuro: #063154 */
 .w3-vet-dark {
     background-color: #063154;
     color: white;
@@ -38,7 +37,7 @@ body {
     color: #063154;
 }
 
-/* Estilos específicos de componentes */
+/* Estilos de componentes */
 .btn-rounded {
     border-radius: 50px;
 }
@@ -63,7 +62,7 @@ body {
 }
 
 
-/* Chips y Botones de selección */
+/* Chips y botones de selección */
 .w3-chip-bg {
     background-color: #e0f2f1;
     color: #025f67;
@@ -73,7 +72,6 @@ body {
     background-color: #b2dfdb;
 }
 
-/* Selected Time Slot Style */
 .time-slot-selected {
     background-color: #2f9d94;
     color: white;
@@ -93,7 +91,6 @@ body {
 
 .w3-badge-secondary {
     background-color: #e0f2f1;
-    /* Variant light of teal */
     color: #025f67;
     padding: 4px 8px;
     font-size: 12px;
@@ -118,7 +115,7 @@ body {
     color: #d0021b;
 }
 
-/* Hover Effect */
+/* Hover */
 .hover-effect:hover {
     transform: translateY(-5px);
     transition: 0.3s;
@@ -353,11 +350,6 @@ h2 {
     }
 
     .evento {
-        /*font-size: 9px;
-        padding: 2px 3px;
-        margin-top: 14px;*/
-
-        /* Limita a 2 líneas */
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
