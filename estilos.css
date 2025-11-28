@@ -8,6 +8,12 @@ h6 {
     font-family: "Lexend", sans-serif;
 }
 
+.perfil-row {
+    display: flex;
+    align-items: flex-start; /* alinea ambos arriba */
+    gap: 20px; /* opcional: separa columnas */
+}
+
 /* Paleta */
 body {
     background-color: #f7f6f2;
@@ -59,6 +65,16 @@ body {
     border-color: #2f9d94;
     outline: none;
 
+}
+.btn-cancel:hover {
+    background-color: #ff4d4d !important; /* rojo */
+    color: white !important;
+}
+
+.active-tab {
+    color: #2f9d94 !important;
+    font-weight: bold !important;
+    border-bottom: 3px solid #2f9d94 !important;
 }
 
 

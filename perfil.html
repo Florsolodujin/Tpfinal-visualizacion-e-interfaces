@@ -84,56 +84,167 @@
                 <div class="w3-col l8 w3-margin-bottom">
                     <!-- Tabs -->
                     <div class="w3-bar w3-margin-bottom">
-    <button class="w3-bar-item w3-button w3-bottombar w3-border-vet-primary w3-text-black w3-mobile"
-        style="font-weight: bold; border-width: 3px !important;">Próximos Turnos</button>
-    <button class="w3-bar-item w3-button w3-text-grey w3-mobile">Historial de Turnos</button>
-    <a class="w3-bar-item w3-button w3-text-grey w3-mobile" href="calendario-nov.html">Mi calendario</a>
-</div>
+                        <button class="w3-bar-item w3-button tablink active-tab w3-bottombar w3-mobile"
+                            style="font-weight: bold; border-width: 3px !important;"
+                            onclick="openTab(event, 'proximos')">
+                            Próximos Turnos
+                        </button>
 
-                    <!-- Turno 1 -->
-                    <div class="w3-white w3-card card-rounded w3-margin-bottom w3-hover-shadow">
-                        <div class="w3-row w3-padding-large">
-                            <div class="w3-col m8 s12">
-                                <p class="w3-text-grey w3-small">Confirmado - 28/11/2025, 09:30 hs</p>
-                                <h3 class="w3-large w3-text-black" style="font-weight: bold;">Campaña de Vacunación
-                                    Antirrábica</h3>
-                                <p class="w3-text-grey w3-small w3-margin-bottom">Centro Veterinario
-                                    Municipal</p>
-                                <button
-                                    class="w3-button w3-light-grey w3-text-black btn-rounded w3-small w3-padding-small w3-hover-red-soft">
-                                    <span class="material-symbols-outlined w3-margin-right"
-                                        style="font-size: 16px;">close</span> Cancelar Turno
-                                </button>
+                        <button class="w3-bar-item w3-button tablink w3-text-grey w3-mobile"
+                            onclick="openTab(event, 'historial')">
+                            Historial de Turnos
+                        </button>
+
+                        <button class="w3-bar-item w3-button tablink w3-text-grey w3-mobile"
+                            onclick="openTab(event, 'calendario')">
+                            Mi calendario
+                        </button>
+                    </div>
+
+                    <div id="proximos" class="tabcontent">
+                        <!-- Turno 1 -->
+                        <div class="w3-white w3-card card-rounded w3-margin-bottom w3-hover-shadow">
+                            <div class="w3-row w3-padding-large">
+                                <div class="w3-col m8 s12">
+                                    <p class="w3-text-grey w3-small">Confirmado - 28/11/2025, 09:30 hs</p>
+                                    <h3 class="w3-large w3-text-black" style="font-weight: bold;">Campaña de Vacunación
+                                        Antirrábica</h3>
+                                    <p class="w3-text-grey w3-small w3-margin-bottom">Centro Veterinario
+                                        Municipal</p>
+                                    <button
+                                        class="w3-button w3-light-grey w3-text-black btn-rounded w3-small w3-padding-small btn-cancel">
+                                        <span class="material-symbols-outlined w3-margin-right"
+                                            style="font-size: 16px;">close</span>
+                                        Cancelar Turno
+                                    </button>
+
+                                </div>
+                                <div class="w3-col m4 s12 w3-margin-top w3-center">
+                                    <div class="w3-round-lg"
+                                        style='height: 100px; background-image: url("img/vacunacion.jpg"); background-size: cover; background-position: center;'>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="w3-col m4 s12 w3-margin-top w3-center">
-                                <div class="w3-round-lg"
-                                    style='height: 100px; background-image: url("img/vacunacion.jpg"); background-size: cover; background-position: center;'>
+                        </div>
+
+                        <!-- Turno 2 -->
+                        <div class="w3-white w3-card card-rounded w3-margin-bottom w3-hover-shadow">
+                            <div class="w3-row w3-padding-large">
+                                <div class="w3-col m8 s12">
+                                    <p class="w3-text-grey w3-small">Confirmado - 08/12/2025, 15:00 hs</p>
+                                    <h3 class="w3-large w3-text-black" style="font-weight: bold;">Control General</h3>
+                                    <p class="w3-text-grey w3-small w3-margin-bottom">Centro de Salud 'Patitas Felices'
+                                    </p>
+                                    <button
+                                        class="w3-button w3-light-grey w3-text-black btn-rounded w3-small w3-padding-small btn-cancel">
+                                        <span class="material-symbols-outlined w3-margin-right"
+                                            style="font-size: 16px;">close</span>
+                                        Cancelar Turno
+                                    </button>
+                                </div>
+                                <div class="w3-col m4 s12 w3-margin-top w3-center">
+                                    <div class="w3-round-lg"
+                                        style='height: 100px; background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYhpzWF6tWHMzXoksKuiT66VU7e2uCJcKOD7HAMlcYS516vxt6Hl94sjzW-F6uJ5fm5RuUNWLP8cHsTvC86bgcPY8qzeoSaKOI7KNyreGN_C3XP1IxAgdUYF_ack9xKC077P_Yq7Xqx0WqTJxtRn1rHAKbsUle-Ccgxch0Q_gVj2ThfZoUUp1_CB9pnlAVzMdLxavSeYbiP_BTB6pGSCkt-utKhoLz7c4TJgjHJN-rVbDbCQcbu_O3jQBKMoSRGypcsJXTPWHX9sI"); background-size: cover; background-position: center;'>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Turno 2 -->
-                    <div class="w3-white w3-card card-rounded w3-margin-bottom w3-hover-shadow">
-                        <div class="w3-row w3-padding-large">
-                            <div class="w3-col m8 s12">
-                                <p class="w3-text-grey w3-small">Confirmado - 08/12/2025, 15:00 hs</p>
-                                <h3 class="w3-large w3-text-black" style="font-weight: bold;">Control General</h3>
-                                <p class="w3-text-grey w3-small w3-margin-bottom">Centro de Salud 'Patitas Felices'</p>
-                                <button
-                                    class="w3-button w3-light-grey w3-text-black btn-rounded w3-small w3-padding-small w3-hover-red-soft">
-                                    <span class="material-symbols-outlined w3-margin-right"
-                                        style="font-size: 16px;">close</span> Cancelar Turno
-                                </button>
-                            </div>
-                            <div class="w3-col m4 s12 w3-margin-top w3-center">
-                                <div class="w3-round-lg"
-                                    style='height: 100px; background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYhpzWF6tWHMzXoksKuiT66VU7e2uCJcKOD7HAMlcYS516vxt6Hl94sjzW-F6uJ5fm5RuUNWLP8cHsTvC86bgcPY8qzeoSaKOI7KNyreGN_C3XP1IxAgdUYF_ack9xKC077P_Yq7Xqx0WqTJxtRn1rHAKbsUle-Ccgxch0Q_gVj2ThfZoUUp1_CB9pnlAVzMdLxavSeYbiP_BTB6pGSCkt-utKhoLz7c4TJgjHJN-rVbDbCQcbu_O3jQBKMoSRGypcsJXTPWHX9sI"); background-size: cover; background-position: center;'>
-                                </div>
-                            </div>
+                    <div id="historial" class="tabcontent" style="display:none;">
+                        <div class="w3-white w3-card card-rounded w3-padding-large">
+                            <p class="w3-text-grey">Tu historial de turnos aparecerá aquí…</p>
                         </div>
                     </div>
+
+                    <div id="calendario" class="tabcontent" style="display:none; ">
+                        <div class="w3-white w3-card card-rounded w3-padding-large">
+
+                            <h3 class="w3-text-vet-primary" style="font-weight: bold;">Mi Calendario</h3>
+
+                            <div class="calendar-container">
+
+                                <div class="mes">
+                                    <a class="btn-inactivo">&#9664;</a>
+                                    <h2>Noviembre 2025</h2>
+                                    <a class="btn-activo">&#9654;</a>
+                                </div>
+
+                                <ul class="calendar-grid">
+
+                                    <li class="weekday">Lun</li>
+                                    <li class="weekday">Mar</li>
+                                    <li class="weekday">Mié</li>
+                                    <li class="weekday">Jue</li>
+                                    <li class="weekday">Vie</li>
+                                    <li class="weekday">Sáb</li>
+                                    <li class="weekday">Dom</li>
+
+                                    <li class="day empty"></li>
+                                    <li class="day empty"></li>
+                                    <li class="day empty"></li>
+                                    <li class="day empty"></li>
+                                    <li class="day empty"></li>
+
+                                    <li class="day"><span>1</span></li>
+                                    <li class="day"><span>2</span></li>
+
+                                    <li class="day"><span>3</span></li>
+                                    <li class="day"><span>4</span></li>
+                                    <li class="day"><span>5</span></li>
+                                    <li class="day"><span>6</span></li>
+                                    <li class="day"><span>7</span></li>
+                                    <li class="day"><span>8</span></li>
+                                    <li class="day"><span>9</span></li>
+
+                                    <li class="day"><span>10</span></li>
+                                    <li class="day"><span>11</span></li>
+                                    <li class="day"><span>12</span></li>
+                                    <li class="day"><span>13</span></li>
+                                    <li class="day"><span>14</span></li>
+                                    <li class="day"><span>15</span></li>
+                                    <li class="day"><span>16</span></li>
+
+                                    <li class="day"><span>17</span></li>
+                                    <li class="day"><span>18</span></li>
+                                    <li class="day"><span>19</span></li>
+                                    <li class="day"><span>20</span></li>
+                                    <li class="day"><span>21</span></li>
+                                    <li class="day"><span>22</span></li>
+                                    <li class="day"><span>23</span></li>
+
+                                    <li class="day"><span>24</span></li>
+                                    <li class="day"><span>25</span></li>
+                                    <li class="day"><span>26</span></li>
+                                    <li class="day"><span>27</span></li>
+                                    <li class="day">
+                                        <span>28</span>
+                                        <div class="evento">Vacunación antirrábica</div>
+                                    </li>
+                                    <li class="day"><span>29</span></li>
+                                    <li class="day"><span>30</span></li>
+
+                                </ul>
+
+                                <div class="popup-bg" id="popupBg">
+                                    <article class="popup">
+                                        <h2 style="font-size: large;">Vacunación antirrábica 2025</h2>
+                                        <h4 style="font-size: medium;"><b>Horario:</b> 9:30 AM</h4>
+                                        <h4 style="font-size: medium;"><b>Ubicación:</b> Centro veterinario Municipal
+                                        </h4>
+                                        <a id="cerrar"
+                                            style="cursor:pointer; color:rgb(243, 104, 104); font-size: small;">Cerrar</a>
+                                    </article>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
+
+
 
                 <!-- Actividad -->
                 <div class="w3-col l4">
@@ -286,6 +397,25 @@
             } else {
                 x.className = x.className.replace(" w3-show", "");
             }
+        }
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-tab");
+                tablinks[i].classList.add("w3-text-grey");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+
+            evt.currentTarget.classList.add("active-tab");
+            evt.currentTarget.classList.remove("w3-text-grey");
         }
     </script>
 </body>
