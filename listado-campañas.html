@@ -74,19 +74,39 @@
                         </div>
                     </div>
 
-                    <p class="w3-text-black" style="font-weight: 600;">Barrio/Ciudad</p>
+                    <p class="w3-text-black" style="font-weight: 600;">Localidad</p>
                     <div class="w3-container w3-white w3-round-lg w3-border w3-border-light w3-padding-small"
                         style="margin-top: 5px; margin-bottom: 15px; display: flex; align-items: center;">
                         <span class="material-symbols-outlined w3-text-grey">search</span>
-                        <input class="w3-input w3-border-0" type="text" placeholder="Buscar..." id="city-filter">
+                        <select class="w3-input w3-border-0" id="location-search">
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option>20 de Junio</option>
+                            <option>Aldo Bonzi</option>
+                            <option>Ciudad Evita</option>
+                            <option>González Catán</option>
+                            <option>Gregorio de Laferrere</option>
+                            <option>Isidro Casanova</option>
+                            <option>La Tablada</option>
+                            <option>Lomas del Mirador</option>
+                            <option>Rafael Castillo</option>
+                            <option>Ramos Mejía</option>
+                            <option>San Justo</option>
+                            <option>Tapiales</option>
+                            <option>Villa Luzuriaga</option>
+                            <option>Villa Madero</option>
+                            <option>Virrey del Pino</option>
+                        </select>
                     </div>
+
 
                     <p class="w3-text-black" style="font-weight: 600;">Tipo de Campaña</p>
                     <select class="w3-select w3-white w3-round-lg w3-border w3-border-light w3-padding w3-margin-bottom"
-                        style="margin-top: 5px;" id="type-filter">
-                        <option value="Todas" selected>Todas</option>
-                        <option value="Vacunación">Vacunación</option>
-                        <option value="Castración">Castración</option>
+                        style="margin-top: 5px;">
+                        <option value="" disabled selected>Selecciona</option>
+                        <option>Todas</option>
+                        <option>Vacunación</option>
+                        <option>Castración</option>
+                        <option>Otras</option>
                     </select>
 
                     <button class="w3-button w3-block w3-vet-primary w3-text-white w3-round-lg w3-margin-top"
@@ -164,6 +184,78 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Item 3 -->
+                    <div class="w3-col m6 w3-margin-bottom">
+                        <div class="w3-white w3-card card-rounded w3-hover-shadow" style="overflow: hidden;">
+                            <div class="w3-display-container"
+                                style="height: 160px; background-image: url('img/esterilizacion-felina.jpg'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="w3-container w3-padding-large"
+                                style="display: flex; flex-direction: column; height: 250px;">
+                                <h3 class="w3-large w3-text-black" style="font-weight: bold;">Esterilización Felina</h3>
+                                <div class="w3-small w3-text-grey w3-margin-top" style="flex-grow: 1;">
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col s1"><span
+                                                class="material-symbols-outlined">calendar_today</span></div>
+                                        <div class="w3-col s11">30 de Noviembre, 2025</div>
+                                    </div>
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col s1"><span
+                                                class="material-symbols-outlined">location_on</span></div>
+                                        <div class="w3-col s11">Centro Veterinario
+                                            Municipal</div>
+                                    </div>
+                                    <div class="w3-row">
+                                        <div class="w3-col s1"><span class="material-symbols-outlined">sell</span></div>
+                                        <div class="w3-col s11"><span
+                                                class="w3-tag w3-badge-secondary w3-round-large">Castración</span></div>
+                                    </div>
+                                </div>
+                                <a href="campaña-esterilizacion-felina.html" style="text-decoration: none;">
+                                    <button
+                                        class="w3-button w3-block w3-vet-primary w3-text-white w3-round-lg w3-margin-top"
+                                        style="font-weight: bold;">Ver Detalles</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="w3-col m6 w3-margin-bottom">
+                        <div class="w3-white w3-card card-rounded w3-hover-shadow" style="overflow: hidden;">
+                            <div class="w3-display-container"
+                                style="height: 160px; background-image: url(img/campaña-castracion-img.png); background-size: cover; background-position: 50%;">
+                            </div>
+                            <div class="w3-container w3-padding-large"
+                                style="display: flex; flex-direction: column; height: 250px;">
+                                <h3 class="w3-large w3-text-black" style="font-weight: bold;">Castración Gratuita</h3>
+                                <div class="w3-small w3-text-grey w3-margin-top" style="flex-grow: 1;">
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col s1"><span
+                                                class="material-symbols-outlined">calendar_today</span></div>
+                                        <div class="w3-col s11"> 03 de Diciembre, 2025</div>
+                                    </div>
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col s1"><span
+                                                class="material-symbols-outlined">location_on</span></div>
+                                        <div class="w3-col s11">Centro Veterinario Municipal</div>
+                                    </div>
+                                    <div class="w3-row">
+                                        <div class="w3-col s1"><span class="material-symbols-outlined">sell</span></div>
+                                        <div class="w3-col s11"><span
+                                                class="w3-tag w3-badge-secondary w3-round-large">Castración</span></div>
+                                    </div>
+                                </div>
+                                <a href="campaña-castracion.html" style="text-decoration: none;">
+                                    <button
+                                        class="w3-button w3-block w3-vet-primary w3-text-white w3-round-lg w3-margin-top"
+                                        style="font-weight: bold;">Ver Detalles</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </div>
             </div>
