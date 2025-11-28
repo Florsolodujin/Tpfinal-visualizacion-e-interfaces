@@ -3,11 +3,11 @@ const popupBg = document.getElementById("popupBg");
 const cerrar = document.getElementById("cerrar");
 
 evento.addEventListener("click", () => {
-    popupBg.style.display = "flex";  // aparece centrado
+    popupBg.style.display = "flex";
 });
 
 cerrar.addEventListener("click", () => {
-    popupBg.style.display = "none";  // se oculta
+    popupBg.style.display = "none"; 
 });
 
 // Cerrar al hacer click fuera del popup
